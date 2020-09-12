@@ -2,47 +2,47 @@
 
 /** 第一题 */
 
-// {
-//     setTimeout(function () {
-//         var a = 'hello'
-//         setTimeout(function () {
-//             var b = 'lagou'
-//             setTimeout(function () {
-//                 var c = 'i love you'
-//                 console.log(a + b + c)
-//             }, 10)
-//         }, 10)
-//     }, 10)
-//
-//     const promise1 = () => {
-//         return new Promise((resolve, reject) => {
-//             setTimeout(() => {
-//                 resolve('hello')
-//             }, 10)
-//         })
-//     }
-//     const promise2 = (value) => {
-//         return new Promise((resolve, reject) => {
-//             setTimeout(() => {
-//                 resolve(value + 'lagou')
-//             }, 10)
-//         })
-//     }
-//     const promise3 = (value) => {
-//         return new Promise((resolve, reject) => {
-//             setTimeout(() => {
-//                 resolve(value + 'i love you')
-//             }, 10)
-//         })
-//     }
-//     promise1().then(value => {
-//         return promise2(value)
-//     }).then(value => {
-//         return promise3(value)
-//     }).then(value => {
-//         console.log(value)
-//     })
-// }
+{
+    setTimeout(function () {
+        var a = 'hello'
+        setTimeout(function () {
+            var b = 'lagou'
+            setTimeout(function () {
+                var c = 'i love you'
+                console.log(a + b + c)
+            }, 10)
+        }, 10)
+    }, 10)
+
+    const promise1 = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('hello')
+            }, 10)
+        })
+    }
+    const promise2 = (value) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(value + 'lagou')
+            }, 10)
+        })
+    }
+    const promise3 = (value) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(value + 'i love you')
+            }, 10)
+        })
+    }
+    promise1().then(value => {
+        return promise2(value)
+    }).then(value => {
+        return promise3(value)
+    }).then(value => {
+        console.log(value)
+    })
+}
 
 
 /** 第二题 */
