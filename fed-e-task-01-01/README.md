@@ -1,4 +1,3 @@
-
 # 简答题
 
 <!-- TOC -->
@@ -43,6 +42,19 @@ EventLoop 是执行js事件（用户事件、非用户事件）执行的策略�
 
 ## 宏任务和微任务
 
+宏任务和微任务可以理解为异步任务的两种形式，两者区别是执行的时机不同
+
 ### 产生宏任务方式
 
+1. setTimeout
+2. setInterval
+3. setImmediate 仅在IE和node中支持
+4. 注册事件
+
 ### 产生微任务方式
+
+1. Promise中的then
+2. queueMicroTask
+3. MutationObserver 监听DOM元素
+
+![作业](2020-09-12-16-07-22.png)

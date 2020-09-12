@@ -1,0 +1,24 @@
+{
+  "name": "lg",
+  "version": "1.0.0",
+  "description": "## 提交形式",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topseczbw/lg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/topseczbw/lg/issues"
+  },
+  "homepage": "https://github.com/topseczbw/lg#readme",
+  "dependencies": {
+    "@types/lodash": "^4.14.161",
+    "lodash": "^4.17.20"
+  }
+}
