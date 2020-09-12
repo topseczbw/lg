@@ -177,10 +177,55 @@
     console.log(refactorEx4())
 }
 
-/** 第四题 */
+/** 第四题 见promise.js */
 
 {
+    let MyPromise = require('./promise')
+
+    let promise = new MyPromise((resolve, reject) => {
+        resolve('成功值')
+        // reject('失败值')
+
+        // setTimeout(() => {
+        //     resolve('异步成功值')
+        // }, 2000)
+    })
+
+    let other = () => {
+        return new MyPromise((resolve, reject) => {
+            resolve('other')
+        })
+    }
+    let p1 = promise.then((value) => {
+        console.log(value)
+        return p1
+    })
+    p1.then((value) => {
+        console.log(value)
+    }, (reason) => {
+        console.log(reason)
+    })
+
+    // promise.then((value) => {
+    //     console.log('成功')
+    //     console.log(value)
+    // }, (reason) => {
+    //     console.log('失败')
+    //     console.log(reason)
+    // })
+    // promise.then((value) => {
+    //     console.log('成功')
+    //     console.log(value)
+    // }, (reason) => {
+    //     console.log('失败')
+    //     console.log(reason)
+    // })
+    // promise.then((value) => {
+    //     console.log('成功')
+    //     console.log(value)
+    // }, (reason) => {
+    //     console.log('失败')
+    //     console.log(reason)
+    // })
 
 }
-
-
