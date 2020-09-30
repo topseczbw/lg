@@ -52,7 +52,7 @@ var foo = function () {
 }
 ```
 
-## 四
+## 四 var let const 比较
 
 var
 
@@ -76,7 +76,7 @@ const
 - 声明的变量不可以被重新赋值
 - 存在块级作用域概念
 
-## 五
+## 五 箭头函数的this
 
 ```js
 var a = 10
