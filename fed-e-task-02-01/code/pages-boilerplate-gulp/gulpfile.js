@@ -11,6 +11,7 @@ const data = {
     pkg: require('./package.json'),
     date: new Date()
 };
+
 const style = () => {
     return src('src/assets/styles/*.scss', { base: 'src' })
         .pipe(

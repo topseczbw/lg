@@ -18,11 +18,13 @@
 var a = 10;
 var obj = {
     a: 20,
+
     fn1() {
         setTimeout(function() {
             console.log(this.a);
         });
     },
+
     fn2() {
         setTimeout(() => {
             console.log(this.a);
@@ -42,7 +44,7 @@ var obj = {
 
 const s1 = Symbol.for('a');
 const s2 = Symbol.for('a');
-// const obj = {
+// Const obj = {
 //     s1: 'a1',
 // }
 console.log(s1 === s2);
