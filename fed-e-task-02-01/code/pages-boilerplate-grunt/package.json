@@ -24,12 +24,7 @@
     "url": "https://zce.me"
   },
   "scripts": {
-    "clean": "gulp clean",
-    "lint": "gulp lint",
-    "serve": "gulp serve",
-    "build": "gulp build",
-    "start": "gulp start",
-    "deploy": "gulp deploy --production"
+    "grunt": "grunt"
   },
   "browserslist": [
     "last 1 version",
@@ -43,7 +38,16 @@
     "jquery": "3.4.1",
     "popper.js": "1.16.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "grunt": "^1.0.4",
+    "grunt-babel": "^8.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "load-grunt-tasks": "^5.1.0",
+    "sass": "^1.22.10"
+  },
   "engines": {
     "node": ">=6"
   }
