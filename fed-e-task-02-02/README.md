@@ -92,15 +92,18 @@ loader 只作用代码的编译阶段，plugin可以用作用于webpack构建的
  3. 执行开发环境webpack配置发现跑不起来，报错 `: Cannot find module '@vue/cli-plugin-babel/preset' from '/Users/bytednace/Desktop/private/lg/fed-e-task-02-02/code/vue-app-base'`
  4. 报错找不到编译vue相关的babel既然未找到，那就手动安装一下 `@vue/cli-plugin-babel`
  5. 安装完毕后，继续跑，报错无法解析less文件中的 @语法，看来是无法解析less文件，跟着报错指引，来到webpack官网，找到loaders页面，搜索less关键字，找到less-loader，安装！安装完毕后，根据less-loader的文档，配置webpack-common-js 配置
- 6. 继续启动开发环境配置，报错 `You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+ 6. 继续启动开发环境配置，报错
+
+```js
+`You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
 > <template>
 |   <div id="app">
 |     <img alt="Vue logo" src="./assets/logo.png">
  @ ./src/main.js 2:0-28 7:13-16
-`
+```
+
 大概意思是说，无法.vue文件类型资源，回到webpack官网找，发现找不到vue相关资源，谷歌后，发现需要安装vue-loader，按照资料操作，配置vue-loader后，执行，报错 `[vue-loader] vue-template-compiler must be installed as a peer dependency, or a compatible compiler implementation must be passed via options.`
-7. 看上去需要安装另外的编译模块 vue-template-compiler ，安装完后，执行，报错 `vue-loader was used without the corresponding plugin. Make sure to include VueLoaderPlugin in your webpack config.
-`
+7. 看上去需要安装另外的编译模块 vue-template-compiler ，安装完后，执行，报错 `vue-loader was used without the corresponding plugin. Make sure to include VueLoaderPlugin in your webpack config.`
 8. 使用VueLoaderPlugin插件，并使用 再次报错  ，无法解析 vue文件<style> 标签下的样式，找资料找到vue官网继续 https://vue-loader.vuejs.org/guide/#manual-setup  
 9. 至此打包成功
 10. 但是此时运行开发环境 报错 Cannot convert undefined or null to object   /core-js/internals/set-to-string-tag.js
